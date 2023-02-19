@@ -2,7 +2,7 @@ import React from 'react';
 import PropTyps from 'prop-types';
 
 
-const PrimeraApp = ({saludo }) => {
+const PrimeraApp = ({saludo, subtitulo }) => {
 
  
     
@@ -11,7 +11,7 @@ const PrimeraApp = ({saludo }) => {
         <>
             <h1>{saludo}</h1>
              {/* <pre> { JSON.stringify( saludo,null,3) } </pre> */}
-            <p>Mi primera aplicacion</p>
+            <p>{subtitulo}</p>
         </>
     );
     
@@ -23,5 +23,8 @@ PrimeraApp.PropTyps={
     saludo:PropTyps.string.isRequired
 }
 
+PrimeraApp.defaultProps = {
+    subtitulo: 'Soy un subtitulo'
+}
 
 export default PrimeraApp;
